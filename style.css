@@ -1,0 +1,82 @@
+* {
+  margin: 0;
+  padding: 0%;
+}
+
+body {
+  height: 100vh;
+  overflow: hidden;
+}
+
+.game-container {
+  width: 100%;
+  height: 100vh;
+  background-color: lightgray;
+  overflow: hidden;
+}
+
+#obstacles {
+  position: relative;
+}
+
+.obstacle {
+  position: absolute;
+  height: 100px;
+  right: -100px;
+  width: 70px;
+  border: 1px solid black;
+  box-shadow: inset 0px 0px 5px 2px black;
+}
+
+#character {
+  position: absolute;
+  top: 200px;
+  right: calc(100% - 100px);
+  height: 50px;
+  width: 50px;
+  background-color: red;
+}
+
+#start-game,
+#gameover {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 99;
+}
+
+#start-game {
+  background-color: rgba(0, 255, 183, 0.463);
+}
+
+#gameover {
+  background-color: rgba(255, 0, 0, 0.200);
+  display: none;
+}
+
+button {
+  padding: 8px 12px;
+  font-size: 20px;
+  background-color: rgb(81, 81, 243);
+  color: white;
+  border-radius: 20px;
+  border: 1px solid blue;
+  margin: 10px 0;
+  cursor: pointer;
+}
+
+#gameover h1 {
+  color: red;
+}
+
+#scorebox {
+  position: absolute;
+  top: 20px;
+  left: 30px;
+  z-index: 99;
+}
